@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+*{
+ margin: 0;
+ padding: 0;
+}
+.wrapper{
+	position: relative;
+	width: 600px;
+	height: 400px;
+
+}
+.wrapper ul{
+	width: 600px;
+
+}
+@font-face{
+		font-family:myFirstFont;
+		src:url('Ginga.ttf');
+		}
+.wrapper ul li{
+	font-family:myFirstFont;
+	height: 150px;
+	width: 300px;
+	font-size: 80px;
+	color: deeppink;
+	text-align: center;
+	font-weight: 500;
+	line-height: 150px;
+
+}
+.wrapper img{
+	position: absolute;
+	width: 300px;
+	height: 600px;
+	top:0px;
+	left: 0px;
+	opacity: 0;
+	transition:all 1s ease-in;
+
+}
+
+.wrapper ul li:nth-child(1) img{
+	opacity: 0;
+
+}
+
+.wrapper ul li:nth-child(2) img{
+	opacity: 0;
+}
+
+.wrapper ul li:nth-child(3) img{
+	opacity: 0;
+}
+
+.wrapper ul li:nth-child(4) img{
+	opacity: 0;
+}
+
+.wrapper ul span{
+	position: relative;
+	left: 0px;
+	display: block;
+	width: 300px;
+	height: 600px;
+	z-index: 999;
+
+}
+
+.wrapper ul li:hover{
+	background-color:  #e9e9e2;
+}
+.wrapper ul li:hover img{
+	left: 300px;
+	opacity: 1;
+
+}
+
+
+	</style>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="wrapper">
+	<ul>
+		<li>
+			<span>chengge</span>
+			<img src="1.JPG">
+			
+		</li>
+		<li>
+			<span>xuge</span>
+			<img src="2.JPG">
+			
+		</li>
+		<li>
+			<span>dengge</span>
+			<img src="3.JPG">
+			
+		</li>
+		<li>
+			<span>tongge</span>
+			<img src="4.jpg">
+			
+		</li>
+	</ul>
+</div>
+</div>
+</body>
+</html>

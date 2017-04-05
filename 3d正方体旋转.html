@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>		
+		.stage{
+			position: relative;
+			width: 600px;
+			height: 600px;
+			perspective:600px;
+			margin: 150px auto 0 auto;
+			border: 2px solid black;
+			perspective-origin:50% 50%;
+
+		}
+
+		.actor{
+			position: absolute;
+			margin-left: -150px;
+			margin-top: -150px;
+			left: 50%;
+			top: 50%;
+			width: 300px;
+			height:300px;
+			/*background: orange;*/
+			transform-style:preserve-3d;
+			animation:cube 3s infinite ease;
+
+		}
+
+		@keyframes cube{
+			0%{
+				transform:rotateX(0deg) rotateY(0deg);
+			}
+			50%{
+				transform:rotateX(180deg) rotateY(180deg);
+			}
+			100%{
+				transform:rotateX(360deg) rotateY(360deg);
+			}
+		}
+		.actor div{
+			position: absolute;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			line-height: 300px;
+			transform-style:preserve-3d;
+			opacity: 0.5;
+			/*backface-visibility:hidden;*/
+			
+
+		}
+
+		.actor div:nth-child(1){
+			background: red;
+			transform:rotatex(180deg) translatez(150px);
+
+		}
+		.actor div:nth-child(2){
+			background: green;
+			transform:rotatex(0deg) translatez(150px);
+		}
+		.actor div:nth-child(3){
+			background: blue;
+			transform:rotatey(-90deg) translatez(150px);
+		}
+		.actor div:nth-child(4){
+			background: deeppink;
+			transform:rotatey(90deg) translatez(150px);
+		}
+		.actor div:nth-child(5){
+			background: orange;
+			transform:rotatex(-90deg) translatez(150px);
+		}
+		.actor div:nth-child(6){
+			background: purple;
+			transform:rotatex(90deg) translatez(150px);
+		}
+	</style>
+</head>
+<body>
+	<div class="stage">
+ 		<div class="actor">
+	 		<div>1</div>
+		 	<div>2</div>
+		 	<div>3</div>
+		 	<div>4</div>
+		 	<div>5</div>
+		 	<div>6</div>
+		</div>
+	</div>
+</body>
+</html>
